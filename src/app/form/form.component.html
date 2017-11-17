@@ -11,15 +11,16 @@
         <input placeholder="e.g. I had it with a shake" style="width:90%; height:40px"><br>
         <button style="margin-top:50px" type="submit">ADD TO LIST</button>
       </form>
-      <ul>
-        <li *ngFor="let food of foods">{{food}}</li>
-      </ul>
     </div>
-
   </div>
   <div class="col-lg-8">
-    <div class="well" style="background-color:#16A085">
+    <div class="well" style="background-color:#16A085;font-family: 'Bitter', serif">
       <h1 style="text-align:center">{{list}}</h1>
+      <div class="well" id="btns" style="background-color:#DAF7A6">
+        <button style="margin-right:2%;height:40px">VIEW ALL YOUR FOODS</button>
+        <button style="margin-right:2%;height:40px">VIEW LOW CALORIE FOODS</button>
+        <button style="height:40px">VIEW HIGH CALORIE FOODS</button>
+      </div>
     </div>
 
   </div>
