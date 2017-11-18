@@ -5,3 +5,13 @@
   <label>Description</label><br>
   <input placeholder="e.g. I had it with a shake" style="width:90%; height:40px" #newCalorie><br>
   <button style="margin-top:50px" (click)="addFood()">ADD TO LIST</button>
+
+  <div *ngFor ="let food of newFood" style="text-align:left">
+    <ul>
+      <li>
+          Name: {{food.name}}<br>
+          Description: {{food.descritption}}<br>
+          Calories: {{food.calories}}
+      </li>
+    </ul>
+  </div>

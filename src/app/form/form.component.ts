@@ -1,5 +1,5 @@
 import { Component} from '@angular/core';
-
+import {FoodList} from '../food-list';
 
 
 @Component({
@@ -8,6 +8,6 @@ import { Component} from '@angular/core';
   styleUrls: ['./form.component.css']
 })
 export class FormComponent{
-
+  newFood=FoodList;
 
 }
