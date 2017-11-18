@@ -1,17 +1,31 @@
-  <label>Food Name</label><br>
-  <input placeholder="e.g. Fries" style="width:90%; height:40px" ngModel='newFoodName'><br>
-  <label>Calories</label><br>
-  <input placeholder="e.g. 200" style="width:90%; height:40px" #newDescription><br>
-  <label>Description</label><br>
-  <input placeholder="e.g. I had it with a shake" style="width:90%; height:40px" #newCalorie><br>
-  <button style="margin-top:50px" (click)="addFood()">ADD TO LIST</button>
-
-  <div *ngFor ="let food of newFood" style="text-align:left">
-    <ul>
-      <li>
-          Name: {{food.name}}<br>
-          Description: {{food.descritption}}<br>
-          Calories: {{food.calories}}
-      </li>
-    </ul>
+  <div class="row">
+    <div class="col-lg-4" style="text-align:center">
+      <div class="well" style="background-color:#DAF7A6">
+        <form (submit)="addFood(newName.value)">
+          <label>Food Name</label><br>
+          <input placeholder="e.g. Fries" style="width:90%; height:40px" #newName><br>
+          <label>Calories</label><br>
+          <input placeholder="e.g. 200" style="width:90%; height:40px" #newDescription><br>
+          <label>Description</label><br>
+          <input placeholder="e.g. I had it with a shake" style="width:90%; height:40px" #newCalorie><br>
+          <button style="margin-top:50px" (click)="onAdd(newName.value)">ADD TO LIST</button>
+        </form>
+      </div>
+    </div>
+      <div class="col-lg-8">
+        <div class="col-lg-6">
+        <h1 style="font-size:20px; text-align:center; margin-top:-20px">{{display}}</h1>
+          <div class="well" style="background-color:#16A085;overflow-y:auto; height:300px">
+            <div *ngFor ="let food of newFood" style="text-align:left">
+              <ul>
+                <li>
+                    Name: {{food}}<br>
+                    Description: {{descritption}}<br>
+                    Calories: {{calories}}
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
   </div>

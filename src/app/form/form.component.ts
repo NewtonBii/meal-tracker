@@ -8,6 +8,26 @@ import {FoodList} from '../food-list';
   styleUrls: ['./form.component.css']
 })
 export class FormComponent{
-  newFood=FoodList;
+display="Your List";
+
+newFood:Food[]=[];
+
+  onAdd(newName){
+    if (this.newFood){
+      this.newFood.push(newName.value);
+    }
+  }
+  addFood(newName){
+    this.newFood.unshift(newName);
+  }
+}
+
+
+export class Food {
+  constructor(
+  public name:string,
+  public descritption:string,
+  public calories:number
+){}
 
 }
