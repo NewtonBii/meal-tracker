@@ -1,3 +1,9 @@
-<p>
-  display works!
-</p>
+<div class="food-items">
+  <ol>
+    <li *ngFor="let myFoods of foods">
+    <p>Name: {{myFoods.name}}</p>
+    <p>Description: {{myFoods.descritption}}</p>
+    <p>Calories: {{myFoods.calories}}</p>
+  </li>
+</ol>
+</div>
