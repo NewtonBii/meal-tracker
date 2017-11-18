@@ -1,15 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
+import {Food} from '../food';
 
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
   styleUrls: ['./form.component.css']
 })
-export class FormComponent implements OnInit {
+export class FormComponent{
+foods:Food[]=[{name:'Fries',descritption:'Nothing else',calories:600},
+{name:'Fries',descritption:'Nothing else',calories:600}]
 
-  constructor() { }
 
-  ngOnInit() {
-  }
 
 }
