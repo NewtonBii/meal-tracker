@@ -1,13 +1,15 @@
 
 <form>
   <label>Food Name</label><br>
-  <input placeholder="e.g. Fries" style="width:90%; height:40px"><br>
+  <input placeholder="e.g. Fries" style="width:90%; height:40px" ngModel='newFoodName'><br>
   <label>Calories</label><br>
-  <input placeholder="e.g. 200" style="width:90%; height:40px"><br>
+  <input placeholder="e.g. 200" style="width:90%; height:40px" #newDescription><br>
   <label>Description</label><br>
-  <input placeholder="e.g. I had it with a shake" style="width:90%; height:40px"><br>
-  <button style="margin-top:50px">ADD TO LIST</button>
+  <input placeholder="e.g. I had it with a shake" style="width:90%; height:40px" #newCalorie><br>
+  <button style="margin-top:50px" (click)="addFood()">ADD TO LIST</button>
 </form>
-<div class="food">
-  <p *ngFor='let myFood of foods'>{{myFood}}</p>
-</div>
+<!-- <div class="food" *ngFor='let myFood of foods'>
+  <p>{{myFood.name}}</p>
+  <p>{{myFood.descritption}}</p>
+  <p>{{myFood.calories}}</p>
+</div> -->

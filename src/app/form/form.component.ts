@@ -7,8 +7,13 @@ import {Food} from '../food';
   styleUrls: ['./form.component.css']
 })
 export class FormComponent{
+myListFoods=[]
 foods:Food[]=[{name:'Fries',descritption:'Nothing else',calories:600},
 {name:'Fries',descritption:'Nothing else',calories:600}]
+
+addFood(){
+  this.myListFoods.push(this.foods[0].name);
+}
 
 
 
