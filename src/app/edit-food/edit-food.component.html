@@ -1,3 +1,10 @@
-<p>
-  edit-food works!
-</p>
+<div class="edit-form" *ngIf="childSelectedFood">
+  <label>EDIT LIST</label><br>
+  <label>Food Name</label><br>
+  <input style="width:90%; height:40px" [(ngModel)]="childSelectedFood.name"><br>
+  <label>Description</label><br>
+  <input style="width:90%; height:40px" [(ngModel)]="childSelectedFood.descritption"><br>
+  <label>Calories</label><br>
+  <input style="width:90%; height:40px" [(ngModel)]="childSelectedFood.calories"><br>
+  <button style="margin-top:50px" type="submit" (click)="doneClicked()">SAVE</button>
+</div>

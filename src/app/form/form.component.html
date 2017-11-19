@@ -11,50 +11,20 @@
           <input placeholder="e.g. I had it with a shake" style="width:90%; height:40px" #newCalorie><br>
           <button style="margin-top:50px" type="submit">ADD TO LIST</button>
         <!-- </form> -->
-<div class="edit-form" *ngIf="selectedFood">
-  <label>EDIT LIST</label><br>
-  <label>Food Name</label><br>
-  <input style="width:90%; height:40px" [(ngModel)]="selectedFood.name"><br>
-  <label>Description</label><br>
-  <input style="width:90%; height:40px" [(ngModel)]="selectedFood.descritption"><br>
-  <label>Calories</label><br>
-  <input style="width:90%; height:40px" [(ngModel)]="selectedFood.calories"><br>
-  <button style="margin-top:50px" type="submit" (click)="finishedEditing()">SAVE</button>
-</div>
+        <app-edit-food
+        [childSelectedFood]="selectedFood"
+        (doneClickedSender)="finishedEditing()"
+        ></app-edit-food>
       </div>
     </div>
       <div class="col-lg-8">
 
         <h1 style="font-size:20px; text-align:center; margin-top:-20px">{{display}}</h1>
           <div class="well" style="background-color:#16A085;overflow-y:auto; height:300px">
-            <div *ngFor ="let food of newFoods" style="text-align:left">
-              <ul>
-                <li>
-                  <button>remove</button><button (click)="showDetails(food)">Edit</button><br>
-                    Name: {{food.name}}<br>
-                    Description: {{food.descritption}}<br>
-                    Calories: {{food.calories}}
-                </li>
-              </ul>
-              <!-- <div >
-                <label>Name</label>
-                <input [(ngModel)]="food.name">
-                <label>Description</label>
-                <input [(ngModel)]="food.descritption">
-                <label>Calories</label>
-                <input [(ngModel)]="food.calories">
-              </div> -->
-
-            </div>
-            <div class="edit">
-
-              <!-- <h6>Edit Tasks</h6>
-              <p>Name: {{selectedFood.name}}</p>
-              <p>Description: {{selectedFood.descritption}}</p>
-              <p>Calories: {{selectedFood.calories}}</p> -->
-
-
-            </div>
+              <app-food-list
+              [childFoodList]="masterNewFoods"
+              (clickSender)="showDetails($event)"
+              ></app-food-list>
           </div>
 
       </div>

@@ -1,3 +1,10 @@
-<p>
-  food-list works!
-</p>
+<div *ngFor ="let food of childFoodList" style="text-align:left">
+  <ul>
+    <li>
+      <button>remove</button><button (click)="editButtonClicked(food)">Edit</button><br>
+        Name: {{food.name}}<br>
+        Description: {{food.descritption}}<br>
+        Calories: {{food.calories}}
+    </li>
+  </ul>
+</div>

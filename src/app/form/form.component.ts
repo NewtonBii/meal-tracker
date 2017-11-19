@@ -1,5 +1,5 @@
 import { Component} from '@angular/core';
-
+import {Food} from '../food';
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
@@ -9,12 +9,12 @@ export class FormComponent{
 
 display="Your List";
 
-newFoods:Food[]=[
+masterNewFoods:Food[]=[
+
   new Food("Eggs","Nothing",300),
   new Food("Fish","Ugali",300),
   new Food("Rice","Matoke",300),
 ];
-
 selectedFood=null;
 
 submitted = false;
@@ -22,7 +22,7 @@ submitted = false;
 onSubmit(){this.submitted=true;}
 
 newFood(){
-  this.newFoods=[new Food("","",0)]
+  this.masterNewFoods=[new Food("","",0)]
 }
  finishedEditing(){
    this.selectedFood=null;
@@ -31,27 +31,6 @@ newFood(){
  showDetails(food: Food) {
     this.selectedFood = food;
   }
-  // addName(newName){
-  //   this.newNames.unshift(newName);
-  // }
-  //
-  // addDescription(newDescription){
-  //   this.newDescriptions.unshift(newDescription);
-  // }
-  //
-  // addCalories(newCalorie){
-  //   this.newCalories.unshift(newCalorie);
-  // }
-}
-
-
-export class Food {
-constructor(
-  public name:string,
-  public descritption:string,
-  public calories:number
-
-){}
 
 
 }
