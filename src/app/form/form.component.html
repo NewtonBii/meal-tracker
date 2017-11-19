@@ -1,31 +1,52 @@
   <div class="row">
     <div class="col-lg-4" style="text-align:center">
       <div class="well" style="background-color:#DAF7A6">
-        <form (submit)="addFood(newName.value)">
+<!-- form to add food to the list -->
+        <form>
           <label>Food Name</label><br>
           <input placeholder="e.g. Fries" style="width:90%; height:40px" #newName><br>
           <label>Calories</label><br>
           <input placeholder="e.g. 200" style="width:90%; height:40px" #newDescription><br>
           <label>Description</label><br>
           <input placeholder="e.g. I had it with a shake" style="width:90%; height:40px" #newCalorie><br>
-          <button style="margin-top:50px" (click)="onAdd(newName.value)">ADD TO LIST</button>
+          <button style="margin-top:50px" (click)="addName(newName.value);addDescription(newDescription.value);addCalories(newCalorie.value)">ADD TO LIST</button>
         </form>
+
       </div>
     </div>
       <div class="col-lg-8">
-        <div class="col-lg-6">
+
         <h1 style="font-size:20px; text-align:center; margin-top:-20px">{{display}}</h1>
           <div class="well" style="background-color:#16A085;overflow-y:auto; height:300px">
-            <div *ngFor ="let food of newFood" style="text-align:left">
+            <div *ngFor ="let food of newFoods" style="text-align:left">
               <ul>
                 <li>
-                    Name: {{food}}<br>
-                    Description: {{descritption}}<br>
-                    Calories: {{calories}}
+                  <button>remove</button><button>edit</button><br>
+                    Name: {{food.name}}<br>
+                    Description: {{food.descritption}}<br>
+                    Calories: {{food.calories}}
                 </li>
               </ul>
+              <!-- <div >
+                <label>Name</label>
+                <input [(ngModel)]="food.name">
+                <label>Description</label>
+                <input [(ngModel)]="food.descritption">
+                <label>Calories</label>
+                <input [(ngModel)]="food.calories">
+              </div> -->
+
+            </div>
+            <div class="edit">
+
+              <!-- <h6>Edit Tasks</h6>
+              <p>Name: {{selectedFood.name}}</p>
+              <p>Description: {{selectedFood.descritption}}</p>
+              <p>Calories: {{selectedFood.calories}}</p> -->
+
+
             </div>
           </div>
-        </div>
+
       </div>
   </div>
