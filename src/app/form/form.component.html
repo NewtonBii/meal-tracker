@@ -2,14 +2,14 @@
     <div class="col-lg-4" style="text-align:center">
       <div class="well" style="background-color:#DAF7A6">
 <!-- form to add food to the list -->
-        <form>
+        <form (ngSubmit)="onSubmit()" #foodForm="ngForm">
           <label>Food Name</label><br>
           <input placeholder="e.g. Fries" style="width:90%; height:40px" #newName><br>
           <label>Calories</label><br>
           <input placeholder="e.g. 200" style="width:90%; height:40px" #newDescription><br>
           <label>Description</label><br>
           <input placeholder="e.g. I had it with a shake" style="width:90%; height:40px" #newCalorie><br>
-          <button style="margin-top:50px" (click)="addName(newName.value);addDescription(newDescription.value);addCalories(newCalorie.value)">ADD TO LIST</button>
+          <button style="margin-top:50px" type="submit">ADD TO LIST</button>
         </form>
 
       </div>

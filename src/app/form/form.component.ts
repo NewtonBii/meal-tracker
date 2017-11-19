@@ -10,13 +10,20 @@ export class FormComponent{
 display="Your List";
 
 newFoods:Food[]=[
-  new Food("Eggs","Nothing",300),
-  new Food("Fish","Nothing",450),
-  new Food("Matoke","Nothing",50),
+  // new Food("Eggs","Nothing",300),
+  // new Food("Fish","Nothing",450),
+  // new Food("Matoke","Nothing",50),
 ];
 
 selectedFood=this.newFoods[0];
 
+submitted = false;
+
+onSubmit(){this.submitted=true;}
+
+newFood(){
+  this.newFoods=[new Food("","",0)]
+}
 
   // addName(newName){
   //   this.newNames.unshift(newName);
