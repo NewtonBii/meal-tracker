@@ -15,7 +15,7 @@ newFoods:Food[]=[
   new Food("Rice","Matoke",300),
 ];
 
-selectedFood=this.newFoods[0];
+selectedFood=null;
 
 submitted = false;
 
