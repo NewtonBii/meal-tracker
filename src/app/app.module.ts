@@ -9,6 +9,7 @@ import { FoodListComponent } from './food-list/food-list.component';
 import { EditFoodComponent } from './edit-food/edit-food.component';
 import { HighCaloriesComponent } from './high-calories/high-calories.component';
 import { LowCaloriesComponent } from './low-calories/low-calories.component';
+import { NewFoodComponent } from './new-food/new-food.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { LowCaloriesComponent } from './low-calories/low-calories.component';
     FoodListComponent,
     EditFoodComponent,
     HighCaloriesComponent,
-    LowCaloriesComponent
+    LowCaloriesComponent,
+    NewFoodComponent
   ],
   imports: [
     BrowserModule,

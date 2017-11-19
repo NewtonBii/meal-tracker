@@ -1,10 +1,10 @@
-<div *ngFor ="let food of childFoodList" style="text-align:left">
+<div *ngFor ="let foodList of childFoodList" style="text-align:left">
   <ul>
     <li>
-      <button>remove</button><button (click)="editButtonClicked(food)">Edit</button><br>
-        Name: {{food.name}}<br>
-        Description: {{food.descritption}}<br>
-        Calories: {{food.calories}}
+      <button>remove</button><button (click)="editButtonClicked(foodList)">Edit</button><br>
+        Name: {{foodList.name}}<br>
+        Description: {{foodList.descritption}}<br>
+        Calories: {{foodList.calories}}
     </li>
   </ul>
 </div>

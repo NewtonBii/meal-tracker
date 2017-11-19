@@ -1,31 +1,29 @@
   <div class="row">
     <div class="col-lg-4" style="text-align:center">
       <div class="well" style="background-color:#DAF7A6">
-<!-- form to add food to the list -->
-        <!-- <form (ngSubmit)="onSubmit()" #foodForm="ngForm"> -->
-          <label>Food Name</label><br>
-          <input placeholder="e.g. Fries" style="width:90%; height:40px" #newName><br>
-          <label>Calories</label><br>
-          <input placeholder="e.g. 200" style="width:90%; height:40px" #newDescription><br>
-          <label>Description</label><br>
-          <input placeholder="e.g. I had it with a shake" style="width:90%; height:40px" #newCalorie><br>
-          <button style="margin-top:50px" type="submit">ADD TO LIST</button>
-        <!-- </form> -->
-        <app-edit-food
-        [childSelectedFood]="selectedFood"
-        (doneClickedSender)="finishedEditing()"
-        ></app-edit-food>
+
+        <app-new-food
+        (newFoodSender)="addFood($event)"
+        ></app-new-food>
       </div>
     </div>
       <div class="col-lg-8">
 
         <h1 style="font-size:20px; text-align:center; margin-top:-20px">{{display}}</h1>
           <div class="well" style="background-color:#16A085;overflow-y:auto; height:300px">
+
               <app-food-list
-              [childFoodList]="masterNewFoods"
+              [childFoodList]="masterFoodsList"
               (clickSender)="showDetails($event)"
               ></app-food-list>
-          </div>
 
+          </div>
+          <div class="well">
+            <app-edit-food
+            [childSelectedFood]="selectedFood"
+            (doneClickedSender)="finishedEditing()"
+            ></app-edit-food>
+
+          </div>
       </div>
   </div>

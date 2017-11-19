@@ -1,5 +1,6 @@
 import { Component, Input, Output, EventEmitter} from '@angular/core';
 import {Food} from '../food';
+
 @Component({
   selector: 'app-food-list',
   templateUrl: './food-list.component.html',
