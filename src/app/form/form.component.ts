@@ -26,7 +26,7 @@ submitted = false;
     this.selectedFood = food;
   }
 
-  addFood(newFoodFromChild:Food){
+  addNewFood(newFoodFromChild:Food){
     this.masterFoodsList.push(newFoodFromChild);
   }
 

@@ -14,3 +14,9 @@ form{
   text-align: center;
   font-family: 'Josefin Sans', sans-serif;
 }
+
+#app-background{
+  background-image: url(./assets/kagyana-2955466_1280.jpg);
+  background-size:cover;
+  background-repeat: no-repeat;
+}

@@ -1,27 +1,27 @@
 # MealTracker
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.0.
+Meal Tracking Application created with Angular Framework.
+By Newton Bii
 
-## Development server
+## Description.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+This website will allow users to log the food items they eat with details and calorie count for each, in one day, and then see lists of just the food names, showing details and calories upon click, and to view list based on calorie count. The user can also edit their foods.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Set Up and installation requirements.
 
-## Build
+* clone repository.
+* Install Angular cli.
+* Run nmp install.
+* Install globals e.g. Typescript packages and typescript.
+* npm install typescript -g
+* apm install atom-typescript
+* run ng serve --open.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+## Technologies Used
+* HTML, CSS, JavaScript, TypeScript, Node.js, Angular.
 
-## Running unit tests
+## License
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+MIT License.
+Copyright 2017 Newton Bii

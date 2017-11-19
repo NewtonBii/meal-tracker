@@ -9,6 +9,7 @@ import {Food} from '../food';
 export class NewFoodComponent{
   @Output() newFoodSender=new EventEmitter();
 
+
 addFood(name:string,description:string,calories:number){
   var newFoodToAdd:Food= new Food(name,description,calories);
   this.newFoodSender.emit(newFoodToAdd);
