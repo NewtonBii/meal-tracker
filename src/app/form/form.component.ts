@@ -10,9 +10,7 @@ export class FormComponent{
 display="Your List";
 
 newFoods:Food[]=[
-  // new Food("Eggs","Nothing",300),
-  // new Food("Fish","Nothing",450),
-  // new Food("Matoke","Nothing",50),
+  new Food("Eggs","Nothing",300),
 ];
 
 selectedFood=this.newFoods[0];

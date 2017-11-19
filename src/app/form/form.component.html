@@ -2,7 +2,7 @@
     <div class="col-lg-4" style="text-align:center">
       <div class="well" style="background-color:#DAF7A6">
 <!-- form to add food to the list -->
-        <form (ngSubmit)="onSubmit()" #foodForm="ngForm">
+        <!-- <form (ngSubmit)="onSubmit()" #foodForm="ngForm"> -->
           <label>Food Name</label><br>
           <input placeholder="e.g. Fries" style="width:90%; height:40px" #newName><br>
           <label>Calories</label><br>
@@ -10,8 +10,17 @@
           <label>Description</label><br>
           <input placeholder="e.g. I had it with a shake" style="width:90%; height:40px" #newCalorie><br>
           <button style="margin-top:50px" type="submit">ADD TO LIST</button>
-        </form>
-
+        <!-- </form> -->
+<div class="edit-form">
+  <label>EDIT LIST</label><br>
+  <label>Food Name</label><br>
+  <input style="width:90%; height:40px" [(ngModel)]="selectedFood.name"><br>
+  <label>Calories</label><br>
+  <input style="width:90%; height:40px" [(ngModel)]="selectedFood.descritption"><br>
+  <label>Description</label><br>
+  <input style="width:90%; height:40px" [(ngModel)]="selectedFood.calories"><br>
+  <button style="margin-top:50px" type="submit">SAVE</button>
+</div>
       </div>
     </div>
       <div class="col-lg-8">
@@ -21,7 +30,7 @@
             <div *ngFor ="let food of newFoods" style="text-align:left">
               <ul>
                 <li>
-                  <button>remove</button><button>edit</button><br>
+                  <button>remove</button><button (click)="showDetails(currentFood)">edit</button><br>
                     Name: {{food.name}}<br>
                     Description: {{food.descritption}}<br>
                     Calories: {{food.calories}}
