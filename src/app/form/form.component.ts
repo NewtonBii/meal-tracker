@@ -11,6 +11,8 @@ display="Your List";
 
 newFoods:Food[]=[
   new Food("Eggs","Nothing",300),
+  new Food("Fish","Ugali",300),
+  new Food("Rice","Matoke",300),
 ];
 
 selectedFood=this.newFoods[0];
@@ -22,7 +24,13 @@ onSubmit(){this.submitted=true;}
 newFood(){
   this.newFoods=[new Food("","",0)]
 }
+ finishedEditing(){
+   this.selectedFood=null;
+ }
 
+ showDetails(food: Food) {
+    this.selectedFood = food;
+  }
   // addName(newName){
   //   this.newNames.unshift(newName);
   // }
