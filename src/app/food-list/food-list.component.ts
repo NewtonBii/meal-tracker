@@ -13,6 +13,7 @@ export class FoodListComponent{
 
   editButtonClicked(foodToEdit:Food){
     this.clickSender.emit(foodToEdit);
-
 }
+notVisible=null;
+
 }

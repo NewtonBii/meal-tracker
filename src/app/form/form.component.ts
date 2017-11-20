@@ -28,5 +28,12 @@ submitted = false;
     this.masterFoodsList.unshift(newFoodFromChild);
   }
 
+// deleteFood(food:Food){
+//   for(let i=0;i<this.masterFoodsList.length;i++){
+//     if(this.masterFoodsList[i]==food){
+//       this.masterFoodsList.splice(i,1);
+//     }
+//   }
+// }
 
 }

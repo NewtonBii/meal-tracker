@@ -1,10 +1,42 @@
-<div  style="text-align:left">
-  <ol>
-    <li *ngFor ="let foodList of childFoodList">
-      <button>remove</button><button (click)="editButtonClicked(foodList)">Edit</button><br>
-        Name: {{foodList.name}}<br>
-        Description: {{foodList.descritption}}<br>
-        Calories: {{foodList.calories}}
-    </li>
-  </ol>
+<div class="col-lg-4">
+  <h4 style="margin-top:-1px; text-align:center">ALL FOODS</h4>
+  <div class="well" style="overflow-y:auto; height:250px; width:100%">
+    <ol>
+
+      <li *ngFor ="let foodList of childFoodList" style="margin-left:-30px;">
+          Name: {{foodList.name}}<br>
+          Description: {{foodList.descritption}}<br>
+          Calories: {{foodList.calories}}<br>
+          <button (click)="editButtonClicked(foodList)">Edit</button><br>
+      </li>
+    </ol>
+  </div>
+</div>
+<div class="col-lg-4">
+  <button style="margin-left:18%">LOW CALORIES</button>
+  <div class="well" style="overflow-y:auto; height:250px; width:100%">
+    <div  *ngIf="notVisible">
+      <ol>
+        <li *ngFor ="let foodList of childFoodList" style="margin-left:-30px;">
+            Name: {{foodList.name}}<br>
+            Description: {{foodList.descritption}}<br>
+            Calories: {{foodList.calories}}<br>
+        </li>
+      </ol>
+    </div>
+  </div>
+</div>
+<div class="col-lg-4">
+  <button style="margin-left:18%">HIGH CALORIES</button>
+  <div class="well" style="overflow-y:auto; height:250px; width:100%">
+    <div *ngIf="notVisible">
+      <ol>
+        <li *ngFor ="let foodList of childFoodList" style="margin-left:-30px;">
+            Name: {{foodList.name}}<br>
+            Description: {{foodList.descritption}}<br>
+            Calories: {{foodList.calories}}<br>
+        </li>
+      </ol>
+    </div>
+  </div>
 </div>
