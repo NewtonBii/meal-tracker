@@ -25,7 +25,7 @@ submitted = false;
   }
 
   addNewFood(newFoodFromChild:Food){
-    this.masterFoodsList.push(newFoodFromChild);
+    this.masterFoodsList.unshift(newFoodFromChild);
   }
 
 
