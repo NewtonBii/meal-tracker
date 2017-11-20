@@ -7,6 +7,7 @@ import {Food} from '../food';
   styleUrls: ['./food-list.component.css']
 })
 export class FoodListComponent{
+
   @Input() childFoodList:Food[];
   @Output() clickSender=new EventEmitter();
 

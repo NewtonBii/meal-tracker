@@ -10,8 +10,6 @@ export class FormComponent{
 display="Your List";
 
 masterFoodsList:Food[]=[
-  new Food("Eggs","Nothing",300),
-
 ];
 
 selectedFood=null;
