@@ -7,8 +7,6 @@ import { AppComponent } from './app.component';
 import { FormComponent } from './form/form.component';
 import { FoodListComponent } from './food-list/food-list.component';
 import { EditFoodComponent } from './edit-food/edit-food.component';
-import { HighCaloriesComponent } from './high-calories/high-calories.component';
-import { LowCaloriesComponent } from './low-calories/low-calories.component';
 import { NewFoodComponent } from './new-food/new-food.component';
 import { FilterPipe } from './filter.pipe';
 import { FilterHighPipe } from './filter-high.pipe';
@@ -20,8 +18,6 @@ import { FilterHighPipe } from './filter-high.pipe';
     FormComponent,
     FoodListComponent,
     EditFoodComponent,
-    HighCaloriesComponent,
-    LowCaloriesComponent,
     NewFoodComponent,
     FilterPipe,
     FilterHighPipe
