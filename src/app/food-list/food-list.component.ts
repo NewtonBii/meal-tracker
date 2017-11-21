@@ -14,6 +14,15 @@ export class FoodListComponent{
   editButtonClicked(foodToEdit:Food){
     this.clickSender.emit(foodToEdit);
 }
-notVisible=null;
+
+foodList=false;
+ showFood(){
+   this.foodList=true;
+ }
+
+ foodList1=false;
+  showFood1(){
+    this.foodList1=true;
+  }
 
 }
