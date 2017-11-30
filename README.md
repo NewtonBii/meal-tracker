@@ -16,7 +16,9 @@ This website will allow users to log the food items they eat with details and ca
 * Install globals e.g. Typescript packages and typescript.
 * npm install typescript -g
 * apm install atom-typescript
-* run ng serve --open.
+
+## Development Server.
+run ng serve --open. It will navigate to http://localhost:4200/. From there you can change source code and view the changes live from the browser.
 
 ## Technologies Used
 * HTML, CSS, JavaScript, TypeScript, Node.js, Angular.
