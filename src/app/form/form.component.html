@@ -17,6 +17,7 @@
               <app-food-list
               [childFoodList]="masterFoodsList"
               (clickSender)="showDetails($event)"
+              (removeclickSender) = "removeFood($event)"
               ></app-food-list>
           </div>
       </div>

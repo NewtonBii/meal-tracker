@@ -24,6 +24,13 @@ submitted = false;
     this.selectedFood = food;
   }
 
+  removeFood(food:Food){
+    for (var i=0; i<this.masterFoodsList.length;i++){
+        this.masterFoodsList.splice(i,1);
+    }
+
+  }
+
   addNewFood(newFoodFromChild:Food){
     this.masterFoodsList.unshift(newFoodFromChild);
   }

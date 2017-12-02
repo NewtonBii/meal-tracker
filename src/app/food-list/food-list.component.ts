@@ -11,6 +11,8 @@ export class FoodListComponent{
   @Input() childFoodList:Food[];
   @Output() clickSender=new EventEmitter();
 
+  @Output() removeclickSender = new EventEmitter();
+
   editButtonClicked(foodToEdit:Food){
     this.clickSender.emit(foodToEdit);
 }
@@ -24,5 +26,9 @@ foodList=false;
   showFood1(){
     this.foodList1=true;
   }
+
+removeButtonClicked(foodToEdit:Food){
+  this.removeclickSender.emit(foodToEdit);
+}
 
 }
